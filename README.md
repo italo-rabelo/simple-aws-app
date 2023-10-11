@@ -38,9 +38,9 @@ This tutorial is divided into six small modules. Please complete each module in 
 You will create this web application using the AWS Management Console, which can be accessed directly in your web browser.
 
 # Module 1: Create a Web App
-### In this module, you will deploy static resources for your web applications using the AWS Amplify console
+### In this module, you will deploy static resources for your web applications using the AWS Amplify console.
  
- Overview
+**Overview**
 
 In this module, you will use the <a href = "https://aws.amazon.com/pt/amplify/hosting/">AWS Amplify</a> console to deploy the static resources for your web application. In subsequent modules, you will add dynamic functionality to these pages using AWS Lambda and Amazon API Gateway to call remote RESTful APIs.
 
@@ -49,7 +49,7 @@ All of your static web content—including HTML, CSS, JavaScript, images, and ot
 The website will be an extremely simple "Hello World" page, and we will add more functionality in later modules.
 
 
-What you will accomplish
+**What you will accomplish**
 
 In this module, you will:
 
@@ -59,4 +59,4 @@ In this module, you will:
 
 
 
-       
+
