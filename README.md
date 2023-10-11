@@ -5,15 +5,15 @@ In this tutorial, you will create a simple Web application. First, you will crea
 
 ## What you will accomplish
 
--Create web application.
--Connect the web application to a serverless backend.
--Add interactivity to the web application using an API and a database.
+- Create web application.
+- Connect the web application to a serverless backend.
+- Add interactivity to the web application using an API and a database.
 
 ## Pre-requisites
 
 Before starting this tutorial, you will need:
 
--An AWS account: If you don't already have an account, follow the AWS' basics guide for a brief overview.
+- An AWS account: If you don't already have an account, follow the AWS' basics guide for a brief overview.
 
 ## Application Architecture
 
