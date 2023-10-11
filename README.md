@@ -165,10 +165,53 @@ Lambda trigger – The type of event that will make a Lambda (serverless) functi
 ## Implementation
 **Create and configure your lambda function**
 
-1.In a new browser tab, log in to the <a href= "https://us-east-2.console.aws.amazon.com/lambda/home?region=us-east-2#
+1. In a new browser tab, log in to the <a href= "https://us-east-2.console.aws.amazon.com/lambda/home?region=us-east-2#
 ">AWS Lambda console</a>.
-2.Make sure you create your **function in the same Region in which you created the web app in the previous module**. You can see this at the very top of the page, next to your account name.
-3.Choose the orange **Create function** button.
-4.Under **Function name**, enter HelloWorldFunction.
-5.Select **Python 3.8** from the **runtime** dropdown and leave the rest of the defaults unchanged.
+2. Make sure you create your **function in the same Region in which you created the web app in the previous module**. You can see this at the very top of the page, next to your account name.
+3. Choose the orange **Create function** button.
+4. Under **Function name**, enter HelloWorldFunction.
+5. Select **Python 3.8** from the **runtime** dropdown and leave the rest of the defaults unchanged.
+    
+   ![a](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/Full%20Stack%20tutorial%20CreateFunction%20Python.cfe5da9cc8bd900c55ed8e7a9e024c219e5d8f0a.png)
+   
+6. Choose the orange **Create function** button.
+7. You should see a green message box at the top of your screen with the following message "Successfully created the function **HelloWorldFunction**"
 
+8. Under **Code source**, replace the code in **lambda_function.py** with the following:
+
+```python
+# import the JSON utility package since we will be working with a JSON object
+import json
+# define the handler function that the Lambda service will use as an entry point
+def lambda_handler(event, context):
+# extract values from the event object we got from the Lambda service
+    name = event['firstName'] +' '+ event['lastName']
+# return a properly formatted JSON object
+    return {
+    'statusCode': 200,
+    'body': json.dumps('Hello from Lambda, ' + name)
+    }
+```
+
+
+9. Save by going to the file menu and selecting **Save** to save the changes.
+
+10. Choose **Deploy** to deploy the changes.
+
+11. Let's test our new function. Choose the orange **Test** button to create a test event by selecting **Configure test event.**
+
+![esim](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/Full%20Stack%20tutorial%20Code%20Source.d62a65fc78fe0a829cca91ceeceb7af64af22bfa.png)
+
+
+12. Under Event name, enter **HelloWorldTestEvent**.
+
+13. Copy and paste the following JSON object to replace the default one:
+
+```json
+{
+"firstName": "Ada",
+"lastName": "Lovelace"
+}
+```
+
+14. Choose the **Save** button at the bottom of the page.
