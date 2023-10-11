@@ -130,10 +130,45 @@ Your web app will load in a new browser tab and render "Hello World." Congratula
 
 
 ## Application Architecture
-**Here is what our architecture looks like right now:
+**Here is what our architecture looks like right now:**
 
 ![sera](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/full-stack%20amplify%20console%20arch%20diagram%20module%201.598e9f417bcbb955c0de96c9c2ae4183a3e1b41a.png)
 
 
 It is pretty minimal right now because we are only using the AWS Amplify console. We now have a live web app users can interact with. Next, we will create a Lambda function.
+
+# Module 2: Build a serverless function
+### In this module, you will deploy static resources for your web applications using the AWS Amplify console.
+ 
+**Overview**
+In this module, you will be writing a small piece of code, in Python, JavaScript, or Java, to be used in a later module to add interactivity to your web page. You will use AWS Lambda, a compute service that lets you create serverless functions, eliminating the need for you to manage software and hardware. Instead, applications are broken up into individual functions that can be invoked and scaled individually.
+
+These serverless functions are triggered based on a specific event you will define in the code. It is also a very affordable service, because you are only charged for the number of events you process, not the idle time. Best of all, you do not have to worry about managing any servers.
+
+
+**What you will accomplish**
+
+In this module, you will:
+
+    Create a Lambda function from scratch using the AWS console (in Python, JavaScript, or Java)
+    Create (JSON) events in the AWS console to test your function
+
+**Key concepts**
+
+Compute service – A service that provides computational processing power.
+
+Serverless function – Piece of code that will be executed by a compute service, on demand.
+
+Lambda trigger – The type of event that will make a Lambda (serverless) function run. This can be another AWS service or an external input.
+
+
+## Implementation
+**Create and configure your lambda function**
+
+1.In a new browser tab, log in to the <a href= "https://us-east-2.console.aws.amazon.com/lambda/home?region=us-east-2#
+">AWS Lambda console</a>.
+2.Make sure you create your **function in the same Region in which you created the web app in the previous module**. You can see this at the very top of the page, next to your account name.
+3.Choose the orange **Create function** button.
+4.Under **Function name**, enter HelloWorldFunction.
+5.Select **Python 3.8** from the **runtime** dropdown and leave the rest of the defaults unchanged.
 
