@@ -28,7 +28,7 @@ As we progress through the tutorial, we will delve into these services in detail
 
 This tutorial is divided into six small modules. Please complete each module in the correct order before proceeding to the next one.
 
-1. <a href = "https://aws.amazon.com/pt/getting-started/hands-on/build-web-app-s3-lambda-api-gateway-dynamodb/module-one/?e=gs2020&p=build-a-web-app-intro"> Create a Web App </a> (5 minutes): Deploy static resources for the web application using the AWS Amplify console.
+1. Create a Web App (5 minutes): Deploy static resources for the web application using the AWS Amplify console.
 2. Create a Serverless Function (5 minutes): Use AWS Lambda to create a serverless function.
 3. Link the Serverless Function to the Web App (5 minutes): Deploy the serverless function with the API Gateway.
 4. Create a Data Table (10 minutes): Store data in an Amazon DynamoDB table.
@@ -36,5 +36,8 @@ This tutorial is divided into six small modules. Please complete each module in 
 6. Clean Up Resources (5 minutes): Clean up the resources used in this tutorial.
 
 You will create this web application using the AWS Management Console, which can be accessed directly in your web browser.
+
+# Module 1: Create a Web App
+### In this module, you will deploy static resources for your web applications using the AWS Amplify console
  
        
