@@ -228,4 +228,128 @@ def lambda_handler(event, context):
 
 ![def](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/full-stack%20amplify%20console%20arch%20diagram%20module%202.6567ede33b4c8fa82c4d6ee2760475ed815b5612.png)
 
-You will notice we added the AWS Lambda service to the diagram, but it does not yet have a connection to AWS Amplify or our users. We will build that out in the next module.
+
+# Module 3: Link a Serverless Function to a Web App
+### In this module, you will deploy your serverless function using Amazon API Gateway.
+ 
+**Overview**
+
+In this module, we will use <a href = "https://aws.amazon.com/api-gateway/?e=gs2020&p=build-a-web-app-three">Amazon API Gateway</a> to create a RESTful API that will allow us to make calls to our Lambda function from a web client (typically refers to a user's web browser). API Gateway will act as a middle layer between the HTML client we created in module one and the serverless backend we created in module two.
+
+
+**What you will accomplish**
+
+
+In this module, you will:
+
+Create a new API using API Gateway
+Define HTTP methods on your API
+Trigger a Lambda function from an API
+Enable cross-origin resource sharing (CORS) on an API so you can consume resources from a different origin (domain)
+Test an API created with API Gateway from the AWS Management Console
+
+
+
+**Key concepts**
+
+**RESTful API** – REST stands for "Representational State Transfer" and is an architectural pattern for creating web services. API stands for "application programming interface." Thus, a RESTful API is one that implements the REST architectural pattern.
+
+**HTTP request methods** – HTTP methods are designed to enable communications between clients and servers. Methods, like GET or PUT defined by the HTTP protocol, are used to indicate what action to take on a resource.
+
+**CORS** – The CORS browser security feature uses HTTP headers to tell a browser to allow a given web application running at one origin (domain) to access selected resources from a server at a different origin.
+
+**Edge optimized** – A resource that uses AWS global infrastructure to better serve geographically diverse clients.
+
+
+## Implementation
+
+**Create a new REST API**
+1. Log in to the <a href = "https://console.aws.amazon.com/apigateway/main/">API Gateway Console</a>.
+2. In the **Choose an API type** section, find the REST API card and choose **Build** button on the card.
+3. Under **Choose the protocol**, select **REST**.
+4. Under **Create new API**, select **New API**.
+5. In the **API name** field, enter *HelloWorldAPI*.
+6. Select **Edge optimized** from the **Endpoint Type** dropdown. (Note: Edge-optimized endpoints are best for geographically distributed clients. This makes them a good choice for public services being accessed from the internet. Regional endpoints are typically used for APIs that are accessed primarily from within the same AWS Region.)
+7. Choose the blue **Create API** button. Your settings should look like the accompanying screenshot.
+
+
+![tlvz](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/Full%20Stack%20tutorial%20API%20settings.00fc97f8ce54af56f304927323b49a4247ac2299.png)
+
+
+**Create and new resource and method**
+
+1. In the left navigation pane, select **Resources** under **API: HelloWorldAPI**.
+
+2. Ensure the "/" resource is selected.
+
+3. From the **Actions** dropdown menu, select **Create Method**.
+
+4. Select **POST** from the new dropdown that appears, then select the checkmark.
+
+5. Select **Lambda Function** for the **Integration type**.
+
+6. Select the **Lambda Region** you used when making the function (or else you will see a warning box reading "You do not have any Lambda Functions in...").
+
+7. Enter *HelloWorldFunction* in the **Lambda Function** field.
+
+8. Choose the blue **Save** button.
+
+9. You should see a message letting you know you are giving the API you are creating permission to call your Lambda function. Choose the **OK** button.
+
+10. With the newly created POST method selected, select **Enable CORS** from the **Action** dropdown menu.
+
+11. Leave the POST checkbox selected and choose the blue **Enable CORS and replace existing CORS headers** button.
+
+
+![a](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/Full%20Stack%20tutorial%20EnableCORS.5bd0a1c5540ba714abe44a6ffa0c80a3dd58ce16.png)
+
+
+12. You should see a message asking you to confirm method changes. Choose the blue **Yes, replace existing values** button.
+
+
+
+**Deploy API**
+
+1. In the **Actions** dropdown list, select **Deploy API**.
+
+2. Select **[New Stage]** in the **Deployment stage** dropdown list.
+
+3. Enter *dev* for the **Stage Name**.
+
+4. Choose **Deploy**.
+
+5. Copy and save the URL next to **Invoke URL** (you will need it in module five).
+
+
+
+**Validate API**
+
+1. In the left navigation pane, select **Resources**.
+
+2. The methods for our API will now be listed on the right. Choose **POST**.
+
+3. Choose the small blue lightning bolt.
+
+4. Paste the following into the **Request Body** field:
+
+```js
+{
+    "firstName":"Grace",
+    "lastName":"Hopper"
+}
+```
+
+5. Choose the blue **Test** button.
+
+6. On the right side, you should see a response with **Code 200**.
+
+7. Great! We have built and tested an API that calls our Lambda function.
+
+## Application Architecture
+**Module three is complete. Time to review our architecture:**
+
+
+![def](https://d1.awsstatic.com/getting-started-guides/build-a-basic-web-app/Image2.6f40a854d1708df0a4025aac3f64e767e8891ee2.jpeg)
+
+
+We added API Gateway and connected it to our existing Lambda function. Now, we can trigger our function with an API call. We are still missing the ability to generate this call from our web client. We will add our data table first in module four and connect everything together in module five.
