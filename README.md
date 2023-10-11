@@ -49,6 +49,7 @@ All of your static web content—including HTML, CSS, JavaScript, images, and ot
 The website will be an extremely simple "Hello World" page, and we will add more functionality in later modules.
 
 
+
 **What you will accomplish**
 
 In this module, you will:
@@ -57,6 +58,35 @@ In this module, you will:
 - Upload files for a website directly to Amplify
 - Deploy new versions of a webpage with Amplify
 
+
+
+**Key concepts**
+
+Static website – A static website has fixed content, unlike dynamic websites. Static websites are the most basic type of website and are the easiest to create. All that is required is creating a few HTML pages and publishing them to a web server.
+
+Web hosting – Provides the technologies/services needed for the website to be viewed on the internet.
+
+AWS Regions – Separate geographic areas that AWS uses to house its infrastructure. These are distributed around the world so that customers can choose a Region closest to them to host their cloud infrastructure there.
+
+
+
+## Implementation
+**Create a web app with amplify console
+
+1.Open your favorite text editor on your computer. Create a new file and **paste** the following HTML in it:
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+
+<body>
+    Hello World
+</body>
+</html>
+```
 
 
 
