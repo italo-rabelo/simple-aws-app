@@ -121,5 +121,13 @@ AWS Regions – Separate geographic areas that AWS uses to house its infrastruct
 
 14. After a few seconds, you should see the message *Deployment successfully completed*.
 
+**Test your web app**
+1. Select Domain Management in the left navigation menu.
+
+2. Copy and paste the URL displayed in the form into your browser.
+
+Your web app will load in a new browser tab and render "Hello World." Congratulations!
+
+
 
 
