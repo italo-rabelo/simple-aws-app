@@ -96,6 +96,6 @@ AWS Regions – Separate geographic areas that AWS uses to house its infrastruct
 
 6. Select **Deploy without Git provider**. This is what you should see on the screen:
 
-https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/full-stack%20amplify%20console%20module%20one%20AmplifyAppSetup.d75dc642efb952c632a74a9677d1b6a90a4e83b7.png
+![apagardps](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/full-stack%20amplify%20console%20module%20one%20AmplifyAppSetup.d75dc642efb952c632a74a9677d1b6a90a4e83b7.png)
 
 
