@@ -150,8 +150,9 @@ These serverless functions are triggered based on a specific event you will defi
 
 In this module, you will:
 
-    Create a Lambda function from scratch using the AWS console (in Python, JavaScript, or Java)
-    Create (JSON) events in the AWS console to test your function
+Create a Lambda function from scratch using the AWS console (in Python, JavaScript, or Java)
+Create (JSON) events in the AWS console to test your function
+
 
 **Key concepts**
 
@@ -203,7 +204,7 @@ def lambda_handler(event, context):
 ![esim](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/Full%20Stack%20tutorial%20Code%20Source.d62a65fc78fe0a829cca91ceeceb7af64af22bfa.png)
 
 
-12. Under Event name, enter **HelloWorldTestEvent**.
+12. Under **Event name**, enter *HelloWorldTestEvent*.
 
 13. Copy and paste the following JSON object to replace the default one:
 
@@ -215,3 +216,16 @@ def lambda_handler(event, context):
 ```
 
 14. Choose the **Save** button at the bottom of the page.
+
+
+**Test your lambda function**
+1. Under the **HelloWorldFunction** section at the top of the page, select **Test** tab.
+2. You should see a light green box at the top of the page with the following text: Execution result: succeeded. You can choose **Details** to see the event the function returned.
+3. Well done! You now have a working Lambda function.
+
+## Application Architecture
+**Now that we are done with this module, our architecture will look like this:**
+
+![def](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/full-stack%20amplify%20console%20arch%20diagram%20module%202.6567ede33b4c8fa82c4d6ee2760475ed815b5612.png)
+
+You will notice we added the AWS Lambda service to the diagram, but it does not yet have a connection to AWS Amplify or our users. We will build that out in the next module.
