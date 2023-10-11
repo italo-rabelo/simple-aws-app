@@ -129,5 +129,11 @@ AWS Regions – Separate geographic areas that AWS uses to house its infrastruct
 Your web app will load in a new browser tab and render "Hello World." Congratulations!
 
 
+## Application Architecture
+**Here is what our architecture looks like right now:
 
+![sera](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/full-stack%20amplify%20console%20arch%20diagram%20module%201.598e9f417bcbb955c0de96c9c2ae4183a3e1b41a.png)
+
+
+It is pretty minimal right now because we are only using the AWS Amplify console. We now have a live web app users can interact with. Next, we will create a Lambda function.
 
