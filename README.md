@@ -99,4 +99,27 @@ AWS Regions – Separate geographic areas that AWS uses to house its infrastruct
 ![apagardps](https://github.com/italo-rabelo/simple-aws-app/assets/107402049/51cbc1c1-df9a-445e-8c74-6e74edc8b2cd)
 
 
+7. Choose the **Continue** button.
+
+8. In the **App name** field, enter GettingStarted.
+
+9. For **Environment name**, enter dev.
+
+10. Select the **Drag and drop method**. This is what you should see on your screen:
+
+
+![sein](https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/full-stack%20amplify%20console%20module%20one%20AmplifyManualDeploy.67d826d04e7a85a3fdd70be0027dae84e28c4909.png)
+
+
+
+
+11. Choose the **Choose files** button.
+
+12. Select the **ZIP file** you created in Step 3.
+
+13. Choose the **Save and deploy** button.
+
+14. After a few seconds, you should see the message *Deployment successfully completed*.
+
+
 
