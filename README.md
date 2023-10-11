@@ -71,9 +71,8 @@ AWS Regions – Separate geographic areas that AWS uses to house its infrastruct
 
 
 ## Implementation
-**Create a web app with amplify console
-
-1.Open your favorite text editor on your computer. Create a new file and **paste** the following HTML in it:
+**Create a web app with amplify console**
+1. Open your favorite text editor on your computer. Create a new file and **paste** the following HTML in it:
 ```html
 <!DOCTYPE html>
 <html>
@@ -87,6 +86,16 @@ AWS Regions – Separate geographic areas that AWS uses to house its infrastruct
 </body>
 </html>
 ```
+2. **Save** the file as index.html.
 
+3. **ZIP (compress)** only the HTML file.
+
+4. In a new browser window, log into the <a href = "https://us-west-2.console.aws.amazon.com/amplify/home?region=us-west-2#/">Amplify console</a>. **Note:** We will be using the Oregon (us-west-2) Region for this tutorial.
+
+5. In the **Get Started** section, under **Host your web app**, choose the orange **Get started** button.
+
+6. Select **Deploy without Git provider**. This is what you should see on the screen:
+
+https://d1.awsstatic.com/webteam/getting_started/GSRC%202020%20updates/full-stack%20amplify%20console%20module%20one%20AmplifyAppSetup.d75dc642efb952c632a74a9677d1b6a90a4e83b7.png
 
 
